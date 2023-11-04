@@ -35,9 +35,15 @@ public class PacientTableModel extends AbstractTableModel {
 	  }
 
 	  public Object getValueAt(int row, int col) {
-		  Symptom s= symptoms.get(row);
+		 /* Symptom s= symptoms.get(row);
 		 if(col==0) return s.getName();
-		 if(col==1) return pacient.getWeight(s);
+		 if(col==1) return pacient.getWeight(s);*/
+		 switch(col) {
+         case 0: return ((Object) symptoms.get(row));
+         case 1: return ((Object) pacient.getWeight(symptoms.get(row)));
+         	
+         
+ }
 		 return null;
 	  }
 	}

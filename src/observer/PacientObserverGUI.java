@@ -37,13 +37,13 @@ public class PacientObserverGUI extends JFrame implements Observer{
 	}
 
 	@Override
-	public void update(Observable o, Object arg) {
+	public void update(Observable	o,	Object	arg)	{
 		// TODO Auto-generated method stub
 		Covid19Pacient	p=(Covid19Pacient)o;
 		 String	s="<html>	Pacient: <b>"+p.getName()+"</b>	<br>";
 		 s=s+"Covid impact:	<b>"+p.covidImpact()+"</b><br><br>";
 		 s=s+" _____________________	<br>	Symptoms:	<br>";
-		 Iterator<Symptom>	i=(Iterator<Symptom>) p.getSymptoms();
+		 Iterator<Symptom>	i= (Iterator<Symptom>) p.getSymptoms();
 		 Symptom	p2;
 		 while (i.hasNext())	{
 				 p2=i.next();
@@ -51,7 +51,7 @@ public class PacientObserverGUI extends JFrame implements Observer{
 				}
 				s=s+"</html>";
 				symptomLabel.setText(s);
-		
-	}
+}
+
 
 }

@@ -1,6 +1,6 @@
 package adapter;
 
-public interface InvertedIterator {
+public interface InvertedIterator { 
 	// return the actual element and go to the previous
 	public Object previous();
 

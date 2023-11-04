@@ -25,13 +25,13 @@ public class ShowPacientTableGUI extends JFrame{
 	    
 	  	TableModel tm=new Covid19PacientModelAdapter(pacient);
 		table = new JTable(tm);
-	    table.setRowHeight(36);
+	    table.setRowHeight(100);
 	    JScrollPane pane = new JScrollPane(table);
 	    pane.setPreferredSize(
-	      new java.awt.Dimension(300, 200));
+	      new java.awt.Dimension(1000, 1000));
 	    this.getContentPane().add(pane);
 	    
-	  
+	
   }
 
   private static void setFonts() {
