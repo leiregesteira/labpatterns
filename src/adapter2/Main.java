@@ -13,12 +13,12 @@ public class Main {
 		Covid19Pacient paciente=new Covid19Pacient("aitor",35, new SymptomFactory());
 		paciente.addSymptomByName("disnea", 2);
 		paciente.addSymptomByName("fiebre", 1);
-		paciente.addSymptomByName("tos", 3);
+		paciente.addSymptomByName("nauseas", 3);
 		
 		Covid19Pacient paciente2=new Covid19Pacient("maria",30, new SymptomFactory());
-		paciente2.addSymptomByName("dolor de tripa", 3);
+		paciente2.addSymptomByName("diarrea", 2);
 		paciente2.addSymptomByName("fiebre", 1);
-		paciente2.addSymptomByName("tos", 3);
+		paciente2.addSymptomByName("mialgia", 3);
 		
 		ShowPacientTableGUI gui=new ShowPacientTableGUI(paciente);
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
