@@ -79,11 +79,11 @@ public class PacientSymptomGUI extends JFrame {
 				errorLabel.setText(" ");
 				
 				if (new Integer(weightField.getText())<=3) {
-					pacient.addSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName(),	
-							Integer.parseInt(weightField.getText()));
+					
 		    	System.out.println("Symptom added :"+(Symptom)symptomComboBox.getSelectedItem());
 
-				//addSymptomByName ...
+		    	pacient.addSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName(),	
+						Integer.parseInt(weightField.getText()));
 				
 			} else errorLabel.setText("ERROR, Weight between [1..3]");
 				
@@ -97,10 +97,10 @@ public class PacientSymptomGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				errorLabel.setText(" ");
-				pacient.removeSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName());
+				
 		    	System.out.println("Symptom removed :"+(Symptom)symptomComboBox.getSelectedItem());
 
-				//removeSymptomByName...
+		    	pacient.removeSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName());
 				
 			} 
 		});

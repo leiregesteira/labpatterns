@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import domain.Symptom;
+import observer.Covid19Pacient;
 
 import javax.swing.JLabel;
 
@@ -39,11 +40,11 @@ public class PacientObserverGUI extends JFrame implements Observer{
 	@Override
 	public void update(Observable	o,	Object	arg)	{
 		// TODO Auto-generated method stub
-		Covid19Pacient	p=(Covid19Pacient)o;
+		 Covid19Pacient	p=(Covid19Pacient)o;
 		 String	s="<html>	Pacient: <b>"+p.getName()+"</b>	<br>";
 		 s=s+"Covid impact:	<b>"+p.covidImpact()+"</b><br><br>";
 		 s=s+" _____________________	<br>	Symptoms:	<br>";
-		 Iterator<Symptom>	i= (Iterator<Symptom>) p.getSymptoms();
+		 Iterator<Symptom>	i= p.getSymptoms().iterator();
 		 Symptom	p2;
 		 while (i.hasNext())	{
 				 p2=i.next();

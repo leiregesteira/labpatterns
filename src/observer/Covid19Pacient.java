@@ -69,6 +69,8 @@ public class Covid19Pacient extends Observable {
 			s=createSymptom(symptom); 
 			symptoms.put(s,w);		
 		}
+		setChanged();
+		notifyObservers();
 		return s;
 	}
 
